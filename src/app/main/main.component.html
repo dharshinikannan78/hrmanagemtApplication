@@ -1,0 +1,69 @@
+<div id="sideNav" class="sideNav">
+    <div [style.display]="isNavOpen ? 'none': 'block'" class="imageBox pb-4">
+        <div class="d-flex align-items-center justify-content-center">
+            <div>
+                <ngx-avatar [name]="loggerName" [src]="baseUrl + forNav[0]?.photoPath" class="margin-auto dflex"
+                    size="80" [style]="customStyle"></ngx-avatar>
+                <div class="pt-3 text-center">
+                    <h6 class="text-capitalize">{{ loggerName }}</h6>
+                    <span class="badge mt-2">Supervisor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="likeUl">
+        <ul [ngClass]="isNavOpen ? '':'menuList'">
+            <li routerLink="/Employee" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-house"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Home</p>
+            </li>
+            <li routerLink="/main/Employee/addEmployee" routerLinkActive="active" *ngIf="isSuperUser"
+                (click)="shortNav()">
+                <i class="fa-solid fa-user-plus"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Add New User</p>
+            </li>
+            <li routerLink="/asset-management" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Assest</p>
+            </li>
+            <li routerLink="/add-Task" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-user-plus"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Add Task</p>
+            </li>
+            <li routerLink="/taskDetails-kanban" routerLinkActive="active" *ngIf="isSuperUser" (click)="shortNav()">
+                <i class="fa-solid fa-laptop-file"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Task Details</p>
+            </li>
+            <li routerLink="/Configuration" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-laptop-file"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Configuration</p>
+            </li>
+            <li routerLink="/report" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-laptop-file"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Report</p>
+            </li>
+            <li [ngClass]="{'active': step==='step7'}" (click)="logout()">
+                <i class="fa fa-power-off" aria-hidden="true"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">LogOut</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main id="main">
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" (click)="openNav()">
+                <i class="fa-solid fa-bars text-dark"></i>
+            </button>
+            <div class="d-flex align-items-center">
+                <p class="m-0 text-capitalize">{{ loggerName }}</p>
+                <a class="navbar-brand">
+                    <ngx-avatar [name]="loggerName" [src]="baseUrl + forNav[0]?.photoPath" [style]="customStyle">
+                    </ngx-avatar>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+</main>

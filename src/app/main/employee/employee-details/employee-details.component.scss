@@ -1,0 +1,318 @@
+.dflex {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.checkIn {
+    width: 113px;
+    background: rgba(45, 211, 111, 0.2);
+    color: rgb(40, 168, 98);
+}
+.checkOut {
+    width: 113px;
+    background: rgba(235, 68, 90, 0.2);
+    color: #cf3c4f;
+}
+
+.modal-header {
+    background: #03045e !important;
+}
+
+.modal-content {
+    border: none !important;
+}
+
+.modal {
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+.modalbody {
+    padding: 1rem;
+}
+
+.card-title {
+    color: #03045e;
+}
+
+h5 {
+    font-weight: 700;
+}
+
+.card-text {
+    font-weight: 500;
+    color: #a5a2a2;
+}
+
+* {
+    font-family: "poppins", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.card {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+label {
+    font-weight: bold;
+    color: #03045e;
+    text-transform: uppercase;
+}
+
+.scrollbar {
+    height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(2, 2, 2, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #22577e;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 13px 0;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+ul li p {
+    padding: 0 10px;
+    margin: 0;
+    transition: all 20s;
+}
+
+@media (max-width: 767px) {
+    .modal-content {
+        height: 900px !important;
+    }
+    .editForm {
+        height: 600px !important;
+    }
+}
+
+.iconWrap i {
+    padding: 13px;
+    background-color: #e6e6e6;
+    border-radius: 6px;
+}
+
+.bg-White {
+    background-color: #fff;
+}
+
+.greybg {
+    // margin-top: 3rem;
+    background-color: #ececec;
+}
+
+.deleteButton {
+    color: #a5a2a2;
+    border: none;
+}
+
+.step-wizard-list {
+    color: #333;
+    list-style: none;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.step-wizard-item {
+    padding: 0 20px;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.step-wizard-item + .step-wizard-item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 19px;
+    background: #03045e;
+    width: 100%;
+    height: 2px;
+    transform: translate(-50%);
+    z-index: -10;
+}
+
+.progress-count {
+    height: 15px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    color: transparent;
+}
+
+.progress-count:after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background: #03045e;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.progress-count:before {
+    content: "";
+    height: 10px;
+    width: 20px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+}
+
+.progress-label {
+    font-size: 14px;
+    color: #03045e;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.current-item .progress-count:before,
+.current-item ~ .step-wizard-item .progress-count:before {
+    display: none;
+}
+
+.current-item ~ .step-wizard-item .progress-count:after {
+    height: 10px;
+    width: 10px;
+}
+
+.current-item ~ .step-wizard-item .progress-label {
+    opacity: 0.5;
+}
+
+.current-item .progress-count:after {
+    background: #fff;
+    border: 2px solid #03045e;
+}
+
+.current-item .progress-count {
+    color: #03045e;
+}
+.submitButton {
+    padding: 5px;
+    float: right;
+    width: 100px;
+    background: #03045e;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.NextPrev {
+    padding: 5px;
+    float: right;
+    width: 100px;
+    border-radius: 5px;
+}
+h4 {
+    color: #03045e;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 200%;
+    margin-bottom: 3rem;
+}
+
+.modal-content {
+    height: 650px;
+}
+
+.taskRow {
+    max-height: 450px;
+    overflow: auto;
+}
+
+.accordion-button {
+    font-weight: 800;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.accordion-body {
+    background-color: #e7f1ff;
+}
+.accordion-item {
+    border: 1px solid #f3f1f5 !important;
+}
+
+.overflow-eplisis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pill1 {
+    border-radius: 50% 0 0 50%;
+}
+.pill2 {
+    border-radius: 0 50% 50% 0;
+}
+.btn-group a {
+    padding: 3px 3px;
+}
+.btn-group .btn:hover {
+    border-color: transparent;
+    box-shadow: none;
+}
+.btn-group a i {
+    transition: background-color 0.4s ease-in-out;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.btn-group {
+    background-color: #f1f1f1;
+    border: 1px solid #cfcfcf;
+}
+
+.activeTab {
+    background-color: #fff !important;
+}
+
+.listView td {
+    font-size: 15px;
+    height: 85px;
+}

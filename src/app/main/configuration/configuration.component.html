@@ -1,0 +1,118 @@
+<div class="app-users">
+    <h2>Configuration</h2>
+    <div class="table-section" *ngIf="!this.showForms">
+        <div class="d-flex align-items-center pt-1 mb-2 mt-0">
+            <button type="submit" class="btn btn-secondary w-25" (click)="showUserForms(true)">Add
+                Configuration</button>
+        </div>
+        <div class="mt-4">
+            <div class="search-bar d-flex align-items-center position-relative">
+                <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+                <input class="search-input" title="Search" />
+            </div>
+            <div class="overflow-auto">
+                <table class="table datatable-table">
+                    <thead class="datatable-header">
+                        <tr style="text-align: center;">
+                            <th scope="col">S.No</th>
+                            <th scope="col">Shift</th>
+                            <th scope="col">Process Type</th>
+                            <th scope="col">Process Desc</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <td>1</td>
+                            <td>Shift 1</td>
+                            <td>MHE PICKS</td>
+                            <td>10</td>
+                            <td><span class="badge rounded-pill text-bg-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Shift 2</td>
+                            <td>MEZZ PICKS</td>
+                            <td>A/B</td>
+                            <td><span class="badge text-bg-danger">InActive</span>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Shift 3</td>
+                            <td>DISPATCHING</td>
+                            <td>SORT CELL</td>
+                            <td><span class="badge text-bg-warning">In Progress</span></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <section id="login" class="login" *ngIf="this.showForms">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="col-md-12">
+                        <div class="card p-4" style="border-radius: 1rem">
+                            <h3 class="text-black mb-4" style="font-size: 1.5rem">
+                                Add Configuration
+                            </h3>
+                            <form>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
+                                            <option selected>-- select --</option>
+                                            <option value="To Start">To Start</option>
+                                            <option value="In Progres">In-Progres</option>
+                                            <option value="Active">Completed</option>
+                                            <option value="Status 1">Status 1</option>
+                                            <option value="Status 2">Status 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label class="form-label">Shift</label>
+                                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
+                                            <option selected>-- select --</option>
+                                            <option value="Shift 1">Shift 1</option>
+                                            <option value="Shift 2">Shift 2</option>
+                                            <option value="Shift 3">Shift 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label class="form-label">Process Desc</label>
+                                        <select name="city" class="form-control mb-1" (change)="onChange($event)">
+                                            <option *ngFor="let country of sourceData" [value]="country.id">
+                                                {{country.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label class="form-label">Process Desc</label>
+                                        <select id="sel1" name="Country" class="form-control mb-1">
+                                            <option *ngFor="let city of values" [value]="city">{{city}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center pt-1 mb-2 mt-0">
+                                    <button type="submit" class="btn btn-secondary w-25">Submit</button>
+                                    <button type="submit" class="btn btn-outline-secondary w-25 ms-3"
+                                        (click)="onClick()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

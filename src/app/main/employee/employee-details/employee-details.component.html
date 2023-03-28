@@ -1,0 +1,48 @@
+<div>
+    <div class="row p-5">
+        <div class="row">
+            <div class="col">
+                <h2>User Management</h2>
+            </div>
+            <div class="col">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-primary" type="button" (click)="onClick()">Add User</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mt-3" *ngFor="let data of isDataValue">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-2">
+                            <ngx-avatar size="43" [style]="customStyle" [name]="data.firstName + ' ' + data.lastName"
+                                [src]="baseUrl + data.photoPath" data-bs-toggle="modal" data-bs-target="#editEmpModal"
+                                (click)="getEmployeeDetails(data.employeeId)">
+                            </ngx-avatar>
+                        </div>
+                        <div class="col-7">
+                            <div class="ps-3">
+                                <p class="m-0 card-title fw-bold text-capitalize overflow-eplisis">
+                                    {{data.firstName}}&nbsp;&nbsp;{{data.lastName}}
+                                </p>
+                                <p class="text-muted m-0 fs-6">Admin
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-3 align-self-center d-flex">
+                            <div class="deleteButton btn"
+                                (click)="deleteEmployeedetails(data.employeeId,data.firstName)">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                            <div class="col-2 align-self-center d-flex">
+                                <div class="deleteButton">
+                                    <i class="fa-solid fa-user-pen"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
