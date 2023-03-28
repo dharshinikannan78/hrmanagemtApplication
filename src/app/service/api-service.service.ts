@@ -13,7 +13,7 @@ export class ApiServiceService {
   // URL = 'http://localhost:8082/api/';
   URL = environment.baseURL;
   photoUrl = environment.photoURL;
-  dologin = this.URL + 'Login/Login';
+  loginForm = this.URL + 'Login/Login';
   addUserCredentials = this.URL + 'Login/AddUser';
   attendanceDetails = this.URL + 'Attendance/AttendanceDetails?data=';
   editUserCredentials = this.URL + 'Login/EditLogin';
@@ -104,7 +104,7 @@ export class ApiServiceService {
   }
 
   getLogin(params: any) {
-    return this.http.post(this.dologin, params)
+    return this.http.post(this.loginForm, params)
   }
 
   addUser(params: any) {

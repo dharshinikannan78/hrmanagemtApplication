@@ -6,13 +6,15 @@ import { AssetComponent } from './asset-management/asset-management.component';
 import { calendarComponent } from './calendar/calendar.component';
 import { MainComponent } from './main.component';
 import { TaskCalendarComponent } from './task-calendar-details/task-calendar.component';
+import { AttendanceManagementComponent } from '../attendance-management/attendance-management.component';
 
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
-      { path: 'add-Task', component: calendarComponent },
+      { path: 'add-task', component: calendarComponent },
       { path: 'asset-management', component: AssetComponent },
-      { path: 'Configuration', component: ConfigurationComponent },
+      { path: 'attendance-management', component: AttendanceManagementComponent },
+      { path: 'configuration', component: ConfigurationComponent },
       { path: 'report', component: ReportComponent },
       { path: 'taskDetails-kanban', component: TaskCalendarComponent },
       { path: 'Employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },

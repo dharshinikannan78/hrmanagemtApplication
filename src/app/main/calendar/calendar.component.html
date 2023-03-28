@@ -1,126 +1,211 @@
 <ng-template #modalContent let-close="close">
-    <div class="p-3">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header" style="border: none;">
-                    <h3 class="modal-title" id="exampleModalLabel">Add Task</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4" style="border: none;">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Task Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Task Name">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Resource</label>
-                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
-                            <option selected>-- select --</option>
-                            <option value="Shift 1">Resource 1</option>
-                            <option value="Shift 2">Resource 2</option>
-                            <option value="Shift 3">Resource 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Asset</label>
-                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
-                            <option selected>-- select --</option>
-                            <option value="Shift 1">Asset 1</option>
-                            <option value="Shift 2">Asset 2</option>
-                            <option value="Shift 3">Asset 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Process type</label>
-                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
-                            <option selected>-- select --</option>
-                            <option value="Shift 1">10</option>
-                            <option value="Shift 2">N/A</option>
-                            <option value="Shift 3">HR/DD</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Equipment Type</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Equipment Type">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Zone location</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Zone location">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Status</label>
-                        <select name="Role" class="form-control mb-1" aria-placeholder="Select Role">
-                            <option selected>-- select --</option>
-                            <option value="Shift 1">Active</option>
-                            <option value="Shift 2">In Active</option>
-                            <option value="Shift 3">Archieve</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer mb-0">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
+  <div class="p-3">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="border: none">
+          <h3 class="modal-title" id="exampleModalLabel">Add Task</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
+        <div class="modal-body p-4" style="border: none">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Task Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Task Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Resource</label>
+            <select
+              name="Role"
+              class="form-control mb-1"
+              aria-placeholder="Select Role"
+            >
+              <option selected>-- select --</option>
+              <option value="Shift 1">Resource 1</option>
+              <option value="Shift 2">Resource 2</option>
+              <option value="Shift 3">Resource 3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Asset</label>
+            <select
+              name="Role"
+              class="form-control mb-1"
+              aria-placeholder="Select Role"
+            >
+              <option selected>-- select --</option>
+              <option value="Shift 1">Asset 1</option>
+              <option value="Shift 2">Asset 2</option>
+              <option value="Shift 3">Asset 3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Process type</label>
+            <select
+              name="Role"
+              class="form-control mb-1"
+              aria-placeholder="Select Role"
+            >
+              <option selected>-- select --</option>
+              <option value="Shift 1">10</option>
+              <option value="Shift 2">N/A</option>
+              <option value="Shift 3">HR/DD</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Equipment Type</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Equipment Type"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Zone location</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Zone location"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select
+              name="Role"
+              class="form-control mb-1"
+              aria-placeholder="Select Role"
+            >
+              <option selected>-- select --</option>
+              <option value="Shift 1">Active</option>
+              <option value="Shift 2">In Active</option>
+              <option value="Shift 3">Archieve</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer mb-0">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
+  </div>
 </ng-template>
+<h2 class="p-5">Task Management</h2>
 
-<div class="container-fluid mt-5 mb-5">
-    <div class="row text-center">
-        <div class="col-md-4">
-            <div class="btn-group">
-                <div class="btn btn-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
-                    (viewDateChange)="activeDayIsOpen = false">
-                    Previous
-                </div>
-                <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
-                    Today
-                </div>
-                <div class="btn btn-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
-                    (viewDateChange)="activeDayIsOpen = false">
-                    Next
-                </div>
-            </div>
+<div class="container-fluid mt-3 mb-5">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-primary"
+          mwlCalendarPreviousView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="activeDayIsOpen = false"
+        >
+          Previous
         </div>
-        <div class="col-md-4">
-            <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+        <div
+          class="btn btn-outline-secondary"
+          mwlCalendarToday
+          [(viewDate)]="viewDate"
+        >
+          Today
         </div>
-        <div class="col-md-4">
-            <div class="btn-group">
-                <div class="btn btn-primary" (click)="view = CalendarView.Month"
-                    [class.active]="view === CalendarView.Month">
-                    Month
-                </div>
-                <div class="btn btn-primary" (click)="view = CalendarView.Week"
-                    [class.active]="view === CalendarView.Week">
-                    Week
-                </div>
-                <div class="btn btn-primary" (click)="view = CalendarView.Day"
-                    [class.active]="view === CalendarView.Day">
-                    Day
-                </div>
-            </div>
-            <button class="btn btn-primary pull-right ms-5" (click)="onClick()">
-                Add new
-            </button>
+        <div
+          class="btn btn-primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="activeDayIsOpen = false"
+        >
+          Next
         </div>
+      </div>
     </div>
-    <br>
-    <div [ngSwitch]="view">
-        <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
-            [refresh]="refresh" (dayClicked)="dayClicked($event.day)"
-            (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-month-view>
-        <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events"
-            [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
-            (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-week-view>
-        <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events"
-            [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)"
-            (eventTimesChanged)="eventTimesChanged($event)">
-        </mwl-calendar-day-view>
+    <div class="col-md-4">
+      <h3>{{ viewDate | calendarDate : view + "ViewTitle" : "en" }}</h3>
     </div>
-
+    <div class="col-md-4">
+      <div class="btn-group">
+        <div
+          class="btn btn-primary"
+          (click)="view = CalendarView.Month"
+          [class.active]="view === CalendarView.Month"
+        >
+          Month
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="view = CalendarView.Week"
+          [class.active]="view === CalendarView.Week"
+        >
+          Week
+        </div>
+        <div
+          class="btn btn-primary"
+          (click)="view = CalendarView.Day"
+          [class.active]="view === CalendarView.Day"
+        >
+          Day
+        </div>
+      </div>
+      <button class="btn btn-primary pull-right ms-5" (click)="onClick()">
+        Add new
+      </button>
+    </div>
+  </div>
+  <br />
+  <div [ngSwitch]="view">
+    <mwl-calendar-month-view
+      *ngSwitchCase="CalendarView.Month"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (dayClicked)="dayClicked($event.day)"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-month-view>
+    <mwl-calendar-week-view
+      *ngSwitchCase="CalendarView.Week"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-week-view>
+    <mwl-calendar-day-view
+      *ngSwitchCase="CalendarView.Day"
+      [viewDate]="viewDate"
+      [events]="events"
+      [refresh]="refresh"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+    >
+    </mwl-calendar-day-view>
+  </div>
 </div>
