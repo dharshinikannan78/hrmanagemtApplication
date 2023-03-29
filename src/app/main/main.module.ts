@@ -14,14 +14,19 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AssetComponent } from './asset-management/asset-management.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
 @NgModule({
   declarations: [
     calendarComponent,
     AssetComponent,
     MainComponent,
     TaskCalendarComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    AttendanceManagementComponent,
   ],
   imports: [
     CommonModule,
@@ -33,10 +38,14 @@ import { ConfigurationComponent } from './configuration/configuration.component'
     EmployeeModule,
     AvatarModule,
     DragDropModule,
+    MatTooltipModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatIconModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
-      useFactory: adapterFactory
-    })
-  ]
+      useFactory: adapterFactory,
+    }),
+  ],
 })
-export class MainModule { }
+export class MainModule {}

@@ -1,0 +1,14 @@
+.app-attendance-management {
+  ::ng-deep {
+    .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+      line-height: 2rem;
+    }
+    .mat-button-toggle {
+        width: fit-content;
+    }
+    .mat-button-toggle-checked {
+        background-color: #1919f4;
+        color: #fff;
+    }
+  }
+}

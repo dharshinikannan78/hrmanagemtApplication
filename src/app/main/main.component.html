@@ -19,7 +19,11 @@
   <div class="likeUl">
     <ul [ngClass]="isNavOpen ? '' : 'menuList'" class="p-0 m-0">
       <li routerLink="/Employee" routerLinkActive="active" (click)="shortNav()">
-        <i class="fa-solid fa-house"></i>
+        <i
+          class="fa-solid fa-house"
+          [matTooltip]="isNavOpen ? 'Home' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Home</p>
       </li>
       <li
@@ -28,7 +32,11 @@
         *ngIf="isSuperUser"
         (click)="shortNav()"
       >
-        <i class="fa-solid fa-user-plus"></i>
+        <i
+          class="fa-solid fa-user-plus"
+          [matTooltip]="isNavOpen ? 'Add new user' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Add New User</p>
       </li>
       <li
@@ -36,7 +44,11 @@
         routerLinkActive="active"
         (click)="shortNav()"
       >
-        <i class="fa-solid fa-calendar-days"></i>
+        <i
+          class="fa-solid fa-calendar-days"
+          [matTooltip]="isNavOpen ? 'Attendance' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Attendance</p>
       </li>
       <li
@@ -44,11 +56,19 @@
         routerLinkActive="active"
         (click)="shortNav()"
       >
-        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <i
+          class="fa-solid fa-screwdriver-wrench"
+          [matTooltip]="isNavOpen ? 'Assets' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Assets</p>
       </li>
       <li routerLink="/add-task" routerLinkActive="active" (click)="shortNav()">
-        <i class="fa-solid fa-cubes-stacked"></i>
+        <i
+          class="fa-solid fa-cubes-stacked"
+          [matTooltip]="isNavOpen ? 'Add task' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Add Task</p>
       </li>
       <li
@@ -57,7 +77,11 @@
         *ngIf="isSuperUser"
         (click)="shortNav()"
       >
-        <i class="fa-solid fa-laptop-file"></i>
+        <i
+          class="fa-solid fa-laptop-file"
+          [matTooltip]="isNavOpen ? 'Task details' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Task Details</p>
       </li>
       <li
@@ -65,15 +89,28 @@
         routerLinkActive="active"
         (click)="shortNav()"
       >
-        <i class="fa-solid fa-gear"></i>
+        <i
+          class="fa-solid fa-gear"
+          [matTooltip]="isNavOpen ? 'Configuration' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Configuration</p>
       </li>
       <li routerLink="/report" routerLinkActive="active" (click)="shortNav()">
-        <i class="fa-solid fa-flag"></i>
+        <i
+          class="fa-solid fa-flag"
+          [matTooltip]="isNavOpen ? 'Report' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Report</p>
       </li>
       <li [ngClass]="{ active: step === 'step7' }" (click)="logout()">
-        <i class="fa fa-power-off" aria-hidden="true"></i>
+        <i
+          class="fa fa-power-off"
+          aria-hidden="true"
+          [matTooltip]="isNavOpen ? 'Sign out' : ''"
+          matTooltipPosition="after"
+        ></i>
         <p [ngClass]="isNavOpen ? 'none' : 'show'">Sign out</p>
       </li>
     </ul>

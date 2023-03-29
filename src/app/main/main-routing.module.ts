@@ -6,7 +6,7 @@ import { AssetComponent } from './asset-management/asset-management.component';
 import { calendarComponent } from './calendar/calendar.component';
 import { MainComponent } from './main.component';
 import { TaskCalendarComponent } from './task-calendar-details/task-calendar.component';
-import { AttendanceManagementComponent } from '../attendance-management/attendance-management.component';
+import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
 
 const routes: Routes = [
   {

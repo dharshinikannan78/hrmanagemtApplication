@@ -12,13 +12,11 @@ import { CommonModule } from '@angular/common';
 import { AvatarModule } from 'ngx-avatar';
 import { DndModule } from 'ngx-drag-drop';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AttendanceManagementComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,55 @@
+<div class="app-attendance-management">
+  <h1 class="p-3 px-4 mb-3">Attendance Management</h1>
+  <div class="container-fluid px-4">
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+      <span>
+        <mat-button-toggle-group
+          name="fontStyle"
+          value="Today"
+          aria-label="Font Style"
+        >
+          <mat-button-toggle value="Today">
+            <div
+              class="d-flex justify-content-center align-items-center flex-column"
+            >
+              <b>Date</b>
+              <span>{{ toggleButtons.today }}</span>
+            </div>
+          </mat-button-toggle>
+          <mat-button-toggle value="Month">
+            <div
+              class="d-flex justify-content-center align-items-center flex-column"
+            >
+              <b>Month</b>
+              <span>{{ toggleButtons.month }}</span>
+            </div>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </span>
+      <span>
+        <button class="px-2" type="button" mat-raised-button color="primary" (click)="fileInput.click()">
+          <i class="fa-solid fa-file-import"></i>
+          <span class="d-none d-md-inline ms-2">Import Sheets</span>
+        </button>
+        <input
+          hidden
+          accept=".xlsx"
+          #fileInput
+          type="file"
+          id="file"
+        />
+      </span>
+    </div>
+    <div class="mb-5">
+      <div
+        [class]="
+          (!absentees ? 'alert-success' : 'alert-danger') +
+          ' alert p-1 text-center'
+        "
+        role="alert"
+      >
+        <h2 class="m-0">Absentees: {{ !absentees ? "None" : absentees }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
