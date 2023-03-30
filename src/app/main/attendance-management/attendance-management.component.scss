@@ -4,11 +4,22 @@
       line-height: 2rem;
     }
     .mat-button-toggle {
-        width: fit-content;
+      width: fit-content;
     }
     .mat-button-toggle-checked {
-        background-color: #1919f4;
-        color: #fff;
+      background-color: #1919f4;
+      color: #fff;
+    }
+  }
+  img.all-present {
+    width: 45%;
+  }
+}
+
+@media (max-width: 958px) {
+  .app-attendance-management {
+    img.all-present {
+      width: 100%;
     }
   }
 }

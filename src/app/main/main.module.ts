@@ -19,6 +19,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AttendanceManagementComponent } from './attendance-management/attendance-management.component';
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     calendarComponent,
@@ -42,6 +44,7 @@ import { AttendanceManagementComponent } from './attendance-management/attendanc
     MatButtonToggleModule,
     MatButtonModule,
     MatIconModule,
+    MatTableModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
