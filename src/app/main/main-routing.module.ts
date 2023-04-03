@@ -6,6 +6,7 @@ import { AssetComponent } from './asset-management/asset-management.component';
 import { calendarComponent } from './calendar/calendar.component';
 import { MainComponent } from './main.component';
 import { TaskCalendarComponent } from './task-calendar-details/task-calendar.component';
+import { ConfigurationDetailsComponent } from './configuration-details/configuration-details.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'Configuration', component: ConfigurationComponent },
       { path: 'report', component: ReportComponent },
       { path: 'taskDetails-kanban', component: TaskCalendarComponent },
+      { path: 'configuration-details', component: ConfigurationDetailsComponent },
       { path: 'Employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
       { path: '', redirectTo: 'Employee', pathMatch: 'full' },
     ]

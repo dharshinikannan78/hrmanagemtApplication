@@ -1,0 +1,283 @@
+<!-- <div class="container-fluid mt-5">
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
+                type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">Disabled</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+                type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row p-5">
+                    <div class="col" *ngFor="let data of isDataValue">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12">
+                                        <div class="ps-3">
+                                            <p class="m-0 card-title text-capitalize overflow-eplisis">
+                                                <span class="text-muted" style="font-size: 13px;">Process Type -
+                                                    <b style="font-size: 13px;"> {{data.processType}}</b></span>
+                                            </p>
+                                            <p class="text-muted m-0 fs-6">
+                                                <span class="text-muted" style="font-size: 13px;">Process
+                                                    Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                                </span>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="row ps-3 mt-2">
+                                        <div class="col-6" style="font-family: sans-serif;">
+                                            {{data.shift}}
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="badge text-bg-success"
+                                                [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...
+            </div>
+            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">...
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid  p-5 mt-5" style="border: none;">
+    <nav style="border: none;" class="d-flex justify-content-center align-items-center">
+        <div style="border: none;" class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button style="border: none;"  class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">MHE PICKS</button>
+            <button style="border: none;" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">MEZZ PICKS</button>
+            <button style="border: none;"b class="nav-link" id="nav-sorting-tab" data-bs-toggle="tab" data-bs-target="#nav-sorting"
+                type="button" role="tab" aria-controls="nav-sorting" aria-selected="false">SORTING</button>
+            <button style="border: none;" class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">DISPATCHING</button>
+            <button style="border: none;" class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-others"
+                type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">OTHERS</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <div class="row p-5">
+                <div class="col" *ngFor="let data of mhePicks">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8">
+                                    <div class="">
+                                        <p class="text-muted m-0 fs-6">
+                                            <span class="text-muted" style="font-size: 13px;">Process
+                                                Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-center d-flex">
+                                    <div class="deleteButton btn">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                    <div class="col-2 align-self-center d-flex">
+                                        <div class="deleteButton">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ps-5 mt-1 m-0">
+                                    <div class="col fw-bold" style="font-family: sans-serif;">
+                                        {{data.shift}}
+                                    </div>
+                                    <div class="col">
+                                        <span class="badge text-bg-success"
+                                            [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="row p-5">
+                <div class="col" *ngFor="let data of mezzPicks">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8">
+                                    <div class="">
+                                        <p class="text-muted m-0 fs-6">
+                                            <span class="text-muted" style="font-size: 13px;">Process
+                                                Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-center d-flex">
+                                    <div class="deleteButton btn">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                    <div class="col-2 align-self-center d-flex">
+                                        <div class="deleteButton">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ps-5 mt-1 m-0">
+                                    <div class="col-6 fw-bold" style="font-family: sans-serif;">
+                                        {{data.shift}}
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge text-bg-success"
+                                            [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-sorting" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <div class="row p-5">
+                <div class="col" *ngFor="let data of sorting">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8">
+                                    <div class="">
+                                        <p class="text-muted m-0 fs-6">
+                                            <span class="text-muted" style="font-size: 13px;">Process
+                                                Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-center d-flex">
+                                    <div class="deleteButton btn">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                    <div class="col-2 align-self-center d-flex">
+                                        <div class="deleteButton">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ps-5 mt-1 m-0">
+                                    <div class="col-6 fw-bold" style="font-family: sans-serif;">
+                                        {{data.shift}}
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge text-bg-success"
+                                            [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+            <div class="row p-5">
+                <div class="col" *ngFor="let data of dispatching">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8">
+                                    <div class="">
+                                        <p class="text-muted m-0 fs-6">
+                                            <span class="text-muted" style="font-size: 13px;">Process
+                                                Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-center d-flex">
+                                    <div class="deleteButton btn">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                    <div class="col-2 align-self-center d-flex">
+                                        <div class="deleteButton">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ps-5 mt-1 m-0">
+                                    <div class="col-6 fw-bold" style="font-family: sans-serif;">
+                                        {{data.shift}}
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge text-bg-success"
+                                            [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-others" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+            <div class="row p-5">
+                <div class="col" *ngFor="let data of others">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-8">
+                                    <div class="">
+                                        <p class="text-muted m-0 fs-6">
+                                            <span class="text-muted" style="font-size: 13px;">Process
+                                                Desc - <b style="font-size: 13px;">{{data.processDesc}}</b>
+                                            </span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-center d-flex">
+                                    <div class="deleteButton btn">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                    <div class="col-2 align-self-center d-flex">
+                                        <div class="deleteButton">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ps-5 mt-1 m-0">
+                                    <div class="col-6 fw-bold" style="font-family: sans-serif;">
+                                        {{data.shift}}
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="badge text-bg-success"
+                                            [ngClass]="{'text-bg-warning': data.status === 'In Progress', 'text-bg-danger': data.status === 'InActive'}">{{data.status}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

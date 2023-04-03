@@ -14,6 +14,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AssetComponent } from './asset-management/asset-management.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { ConfigurationDetailsComponent } from './configuration-details/configuration-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ConfigurationComponent } from './configuration/configuration.component'
     AssetComponent,
     MainComponent,
     TaskCalendarComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    ConfigurationDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./asset-management.component.scss']
 })
 export class AssetComponent implements OnInit {
+  
   showForms: boolean;
 
   ngOnInit(): void {

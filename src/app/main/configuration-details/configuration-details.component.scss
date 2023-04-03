@@ -1,0 +1,32 @@
+.card {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card-title {
+    color: #03045e;
+}
+
+h5 {
+    font-weight: 700;
+}
+.text-bg-success {
+    background-color: #def0e5 !important;
+    color: #28be91 !important;
+    font-weight: bold !important;
+}
+.text-bg-danger {
+    background-color: #fdf0f2 !important;
+    color: #d64a4f !important;
+}
+.text-bg-warning {
+    background-color: #fffaec !important;
+    color: #e2ac08 !important;
+}
+nav {
+    border: none !important;
+}
+.deleteButton {
+    color: #797777;
+    border: none;
+}

@@ -38,6 +38,10 @@
                 <i class="fa-solid fa-laptop-file"></i>
                 <p [ngClass]="isNavOpen ? 'none': 'show'">Configuration</p>
             </li>
+            <li routerLink="/configuration-details" routerLinkActive="active" (click)="shortNav()">
+                <i class="fa-solid fa-laptop-file"></i>
+                <p [ngClass]="isNavOpen ? 'none': 'show'">Configuration Details</p>
+            </li>
             <li routerLink="/report" routerLinkActive="active" (click)="shortNav()">
                 <i class="fa-solid fa-laptop-file"></i>
                 <p [ngClass]="isNavOpen ? 'none': 'show'">Report</p>
